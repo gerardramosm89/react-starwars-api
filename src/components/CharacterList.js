@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {
   setCurrentCharacter,
+	getCharacterProfile,
 } from '../reducer/character/actions';
 
 const CharacterList = ({ characters, setCharacter }) =>
@@ -22,7 +23,8 @@ const mapDispatchToProps = dispatch => ({
   setCharacter(id) {
     return () => {
       dispatch(setCurrentCharacter(id));
-    };
+			dispatch(getCharacterProfile(id));
+		};
   },
 });
 const mapStateToProps = ({ characters }) => ({
