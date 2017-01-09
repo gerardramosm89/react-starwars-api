@@ -1,10 +1,10 @@
 import React from 'react';
+import CharacterList from './CharacterList';
 
 const App = () =>
   <div className='container'>
     <div className='row'>
-      Hello, World!
-			hi
+			<CharacterList />
 		</div>
   </div>;
 
